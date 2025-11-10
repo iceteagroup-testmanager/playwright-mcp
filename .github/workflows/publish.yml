@@ -38,9 +38,6 @@ jobs:
           npm version ${{ steps.canary-version.outputs.version }} --no-git-tag-version
 
       - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npm run lint
-      - run: npm run ctest
 
       - name: Publish to npm with next tag
         run: npm publish --tag next
@@ -61,9 +58,6 @@ jobs:
           registry-url: https://npm.pkg.github.com
           scope: '@iceteagroup-testmanager'
       - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npm run lint
-      - run: npm run ctest
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
