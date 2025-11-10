@@ -12,16 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write  # Required for OIDC npm publishing
+      packages: write  # Required for publishing to GitHub Packages
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/
-      # Ensure npm 11.5.1 or later is installed (for OIDC npm publishing)
-      - name: Update npm
-        run: npm install -g npm@latest
+          registry-url: https://npm.pkg.github.com
+          scope: '@iceteagroup-testmanager'
 
       - name: Get current date
         id: date
@@ -46,27 +44,29 @@ jobs:
 
       - name: Publish to npm with next tag
         run: npm publish --tag next
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-release-npm:
     if: github.event_name == 'release'
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write  # Required for OIDC npm publishing
+      packages: write  # Required for publishing to GitHub Packages
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/
-      # Ensure npm 11.5.1 or later is installed (for OIDC npm publishing)
-      - name: Update npm
-        run: npm install -g npm@latest
+          registry-url: https://npm.pkg.github.com
+          scope: '@iceteagroup-testmanager'
       - run: npm ci
       - run: npx playwright install --with-deps
       - run: npm run lint
       - run: npm run ctest
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-release-docker:
     if: github.event_name == 'release'
