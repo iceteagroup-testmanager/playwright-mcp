@@ -1,6 +1,12 @@
 name: Publish
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   publish:
@@ -11,23 +17,26 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
       
       - uses: actions/setup-node@v5
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
-          scope: '@iceteagroup-testmanager'
+          scope: '@playwright'
 
       - name: Configure git
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Increment version
+        if: github.event_name != 'pull_request'
         run: npm version patch --no-git-tag-version
 
       - name: Commit version bump
+        if: github.event_name != 'pull_request'
         run: |
           git add package.json package-lock.json
           git commit -m "chore: bump version [skip ci]"
@@ -36,7 +45,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run tests
+        run: npm test
+
       - name: Publish to GitHub Packages
+        if: github.event_name != 'pull_request'
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PAT }}
