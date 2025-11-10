@@ -1,5 +1,5 @@
 {
-  "name": "@playwright/mcp",
+  "name": "@iceteagroup-testmanager/mcp",
   "version": "0.0.48",
   "description": "Playwright Tools for MCP",
   "repository": {

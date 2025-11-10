@@ -29,14 +29,14 @@ First, install the Playwright MCP server with your client.
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "@iceteagroup-testmanager/mcp@latest"
       ]
     }
   }
 }
 ```
 
-[<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540playwright%252Fmcp%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540playwright%252Fmcp%2540latest%2522%255D%257D)
+[<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540iceteagroup-testmanager%252Fmcp%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540iceteagroup-testmanager%252Fmcp%2540latest%2522%255D%257D)
 
 <details>
 <summary>Amp</summary>
@@ -48,7 +48,7 @@ Add via the Amp VS Code extension settings screen or by updating your settings.j
   "playwright": {
     "command": "npx",
     "args": [
-      "@playwright/mcp@latest"
+      "@iceteagroup-testmanager/mcp@latest"
     ]
   }
 }
@@ -59,7 +59,7 @@ Add via the Amp VS Code extension settings screen or by updating your settings.j
 Add via the `amp mcp add`command below
 
 ```bash
-amp mcp add playwright -- npx @playwright/mcp@latest
+amp mcp add playwright -- npx @iceteagroup-testmanager/mcp@latest
 ```
 
 </details>
@@ -70,7 +70,7 @@ amp mcp add playwright -- npx @playwright/mcp@latest
 Use the Claude Code CLI to add the Playwright MCP server:
 
 ```bash
-claude mcp add playwright npx @playwright/mcp@latest
+claude mcp add playwright npx @iceteagroup-testmanager/mcp@latest
 ```
 </details>
 
@@ -87,7 +87,7 @@ Follow the MCP install [guide](https://modelcontextprotocol.io/quickstart/user),
 Use the Codex CLI to add the Playwright MCP server:
 
 ```bash
-codex mcp add playwright npx "@playwright/mcp@latest"
+codex mcp add playwright npx "@iceteagroup-testmanager/mcp@latest"
 ```
 
 Alternatively, create or edit the configuration file `~/.codex/config.toml` and add:
@@ -95,7 +95,7 @@ Alternatively, create or edit the configuration file `~/.codex/config.toml` and 
 ```toml
 [mcp_servers.playwright]
 command = "npx"
-args = ["@playwright/mcp@latest"]
+args = ["@iceteagroup-testmanager/mcp@latest"]
 ```
 
 For more information, see the [Codex MCP documentation](https://github.com/openai/codex/blob/main/codex-rs/config.md#mcp_servers).
@@ -111,7 +111,7 @@ For more information, see the [Codex MCP documentation](https://github.com/opena
 
 #### Or install manually:
 
-Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @playwright/mcp@latest`. You can also verify config or add command like arguments via clicking `Edit`.
+Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, use `command` type with the command `npx @iceteagroup-testmanager/mcp@latest`. You can also verify config or add command like arguments via clicking `Edit`.
 
 </details>
 
@@ -121,7 +121,7 @@ Go to `Cursor Settings` -> `MCP` -> `Add new MCP Server`. Name to your liking, u
 Use the Factory CLI to add the Playwright MCP server:
 
 ```bash
-droid mcp add playwright "npx @playwright/mcp@latest"
+droid mcp add playwright "npx @iceteagroup-testmanager/mcp@latest"
 ```
 
 Alternatively, type `/mcp` within Factory droid to open an interactive UI for managing MCP servers.
@@ -146,7 +146,7 @@ Follow the MCP install [guide](https://github.com/google-gemini/gemini-cli/blob/
 
 #### Or install manually:
 
-Go to `Advanced settings` -> `Extensions` -> `Add custom extension`. Name to your liking, use type `STDIO`, and set the `command` to `npx @playwright/mcp`. Click "Add Extension".
+Go to `Advanced settings` -> `Extensions` -> `Add custom extension`. Name to your liking, use type `STDIO`, and set the `command` to `npx @iceteagroup-testmanager/mcp`. Click "Add Extension".
 </details>
 
 <details>
@@ -160,7 +160,7 @@ Follow the MCP Servers [documentation](https://kiro.dev/docs/mcp/). For example 
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "@iceteagroup-testmanager/mcp@latest"
       ]
     }
   }
@@ -193,7 +193,7 @@ Follow the MCP Servers [documentation](https://opencode.ai/docs/mcp-servers/). F
       "type": "local",
       "command": [
         "npx",
-        "@playwright/mcp@latest"
+        "@iceteagroup-testmanager/mcp@latest"
       ],
       "enabled": true
     }
@@ -216,7 +216,7 @@ Click <code>Save</code>.
 
 #### Click the button to install:
 
-[<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540playwright%252Fmcp%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540playwright%252Fmcp%2540latest%2522%255D%257D)
+[<img src="https://img.shields.io/badge/VS_Code-VS_Code?style=flat-square&label=Install%20Server&color=0098FF" alt="Install in VS Code">](https://insiders.vscode.dev/redirect?url=vscode%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540iceteagroup-testmanager%252Fmcp%2540latest%2522%255D%257D) [<img alt="Install in VS Code Insiders" src="https://img.shields.io/badge/VS_Code_Insiders-VS_Code_Insiders?style=flat-square&label=Install%20Server&color=24bfa5">](https://insiders.vscode.dev/redirect?url=vscode-insiders%3Amcp%2Finstall%3F%257B%2522name%2522%253A%2522playwright%2522%252C%2522command%2522%253A%2522npx%2522%252C%2522args%2522%253A%255B%2522%2540iceteagroup-testmanager%252Fmcp%2540latest%2522%255D%257D)
 
 #### Or install manually:
 
@@ -224,7 +224,7 @@ Follow the MCP install [guide](https://code.visualstudio.com/docs/copilot/chat/m
 
 ```bash
 # For VS Code
-code --add-mcp '{"name":"playwright","command":"npx","args":["@playwright/mcp@latest"]}'
+code --add-mcp '{"name":"playwright","command":"npx","args":["@iceteagroup-testmanager/mcp@latest"]}'
 ```
 
 After installation, the Playwright MCP server will be available for use with your GitHub Copilot agent in VS Code.
@@ -242,7 +242,7 @@ Alternatively, use the slash command `/add-mcp` in the Warp prompt and paste the
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "@iceteagroup-testmanager/mcp@latest"
       ]
     }
   }
@@ -265,7 +265,7 @@ Playwright MCP server supports following arguments. They can be provided in the 
 <!--- Options generated by update-readme.js -->
 
 ```
-> npx @playwright/mcp@latest --help
+> npx @iceteagroup-testmanager/mcp@latest --help
   --allowed-hosts <hosts...>            comma-separated list of hosts this
                                         server is allowed to serve from.
                                         Defaults to the host the server is bound
@@ -389,7 +389,7 @@ state [here](https://playwright.dev/docs/auth).
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest",
+        "@iceteagroup-testmanager/mcp@latest",
         "--isolated",
         "--storage-state={path/to/storage.json}"
       ]
@@ -408,7 +408,7 @@ The Playwright MCP server can be configured using a JSON configuration file. You
 using the `--config` command line option:
 
 ```bash
-npx @playwright/mcp@latest --config path/to/config.json
+npx @iceteagroup-testmanager/mcp@latest --config path/to/config.json
 ```
 
 <details>
@@ -491,7 +491,7 @@ When running headed browser on system w/o display or from worker processes of th
 run the MCP server from environment with the DISPLAY and pass the `--port` flag to enable HTTP transport.
 
 ```bash
-npx @playwright/mcp@latest --port 8931
+npx @iceteagroup-testmanager/mcp@latest --port 8931
 ```
 
 And then in MCP client config, set the `url` to the HTTP endpoint:
@@ -548,7 +548,7 @@ docker build -t mcr.microsoft.com/playwright/mcp .
 ```js
 import http from 'http';
 
-import { createConnection } from '@playwright/mcp';
+import { createConnection } from '@iceteagroup-testmanager/mcp';
 import { SSEServerTransport } from '@modelcontextprotocol/sdk/server/sse.js';
 
 http.createServer(async (req, res) => {
