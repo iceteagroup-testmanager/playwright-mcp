@@ -1,6 +1,6 @@
 {
   "name": "@iceteagroup-testmanager/mcp",
-  "version": "0.0.49",
+  "version": "0.0.50",
   "description": "Playwright Tools for MCP",
   "repository": {
     "type": "git",
